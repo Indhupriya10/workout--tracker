@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7-Day Workout Plan</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>7-Day Workout Plan</h1>
+        <p>Follow this structured plan to burn **1000+ calories daily** and tone your body!</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#day1">Day 1 - Full Body + Glutes & Legs</a></li>
+            <li><a href="#day2">Day 2 - Arms & Shoulders</a></li>
+            <li><a href="#day3">Day 3 - Core & Abs</a></li>
+            <li><a href="#day4">Day 4 - Walk Cardio</a></li>
+            <li><a href="#day5">Day 5 - Back & Posture</a></li>
+            <li><a href="#day6">Day 6 - Dance + Hips</a></li>
+            <li><a href="#day7">Day 7 - Recovery/Yoga</a></li>
+        </ul>
+    </nav>
+
+    <section id="progress">
+        <h2>Progress Tracker</h2>
+        <p>Check off completed days:</p>
+        <input type="checkbox" onclick="updateProgress()"> Day 1  
+        <input type="checkbox" onclick="updateProgress()"> Day 2  
+        <input type="checkbox" onclick="updateProgress()"> Day 3  
+        <input type="checkbox" onclick="updateProgress()"> Day 4  
+        <input type="checkbox" onclick="updateProgress()"> Day 5  
+        <input type="checkbox" onclick="updateProgress()"> Day 6  
+        <input type="checkbox" onclick="updateProgress()"> Day 7  
+        <p id="progressStatus">Completion: 0%</p>
+    </section>
+
+    <section id="workouts">
+        <h2>Workout Routine</h2>
+
+        <!-- Example: Day 1 -->
+        <div id="day1">
+            <h3>Day 1: Full Body + Glutes & Legs</h3>
+            <p>Calories Burned: **1000-1100**</p>
+
+            <h4>Warm-up Timer: <span id="warmupTimer1">60</span> sec</h4>
+            <button onclick="startWarmupTimer(1)">Start Warm-up</button>
+
+            <h4>HIIT Section (45 sec per exercise)</h4>
+            <p id="hiitTimer1">45</p>
+            <button onclick="startHiitTimer(1)">Start HIIT Timer</button>
+
+            <h4>Exercises (Repeat as listed)</h4>
+            <ul>
+                <li>Jump Squats - **2 rounds**</li>
+                <li>Push-ups - **3x15**</li>
+                <li>Mountain Climbers - **3x20**</li>
+                <li>Burpees - **2 rounds**</li>
+                <li>Plank Jacks - **3x30 sec**</li>
+            </ul>
+
+            <h4>Workout Videos:</h4>
+            <ul>
+                <li><a href="https://www.youtube.com/watch?v=W4eKVKwf3rQ">Full Body HIIT</a></li>
+                <li><a href="https://www.youtube.com/watch?v=UBMk30rjy0o">Glutes & Legs</a></li>
+            </ul>
+        </div>
+
+        <!-- Repeat for other days -->
+    </section>
+
+    <section id="calorieCounter">
+        <h2>Calorie Tracker</h2>
+        <label>Calories Burned Today:</label>
+        <input type="number" id="caloriesInput" placeholder="Enter burned calories">
+        <button onclick="updateCalories()">Log Calories</button>
+        <p id="totalCalories">Total Calories This Week: 0</p>
+    </section>
+
+</body>
+</html>
